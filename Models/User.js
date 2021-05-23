@@ -1,20 +1,19 @@
-const { string } = require('joi')
 const mongoose = require('mongoose')
 const userSchema = new mongoose.Schema({
   name: {
-    type: string,
+    type: String,
     required: true,
     min: 6,
     max: 255,
   },
   email: {
-    type: string,
+    type: String,
     required: true,
     min: 6,
     max: 255,
   },
   password: {
-    type: string,
+    type: String,
     required: true,
     min: 8,
     max: 2042,

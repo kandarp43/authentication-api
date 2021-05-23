@@ -3,11 +3,14 @@ const express = require('express')
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 
+//Import Routes
+const authRoute = require('./Routes/auth')
+
 dotenv.config()
 const app = express()
 
-//Import Routes
-const authRoute = require('./Routes/auth')
+//Middleware
+app.use(express.json())
 
 //Route middlewares
 app.use('/api/user', authRoute)
