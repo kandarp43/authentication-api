@@ -10,7 +10,7 @@ const postRoute = require('./Routes/posts')
 dotenv.config()
 const app = express()
 
-//Middleware
+//Middlewar
 app.use(express.json())
 
 //Route middlewares
